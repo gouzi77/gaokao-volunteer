@@ -1,60 +1,69 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>高考志愿填报助手 - 张雪峰方法论</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- 微信分享配置 -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>志愿填报助手 - 张雪峰方法论</title>
+    <link rel="stylesheet" href="css/style.css?v=3">
     <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
 </head>
 <body>
     <div class="app-container">
-        <!-- 顶部标题栏 -->
         <header class="chat-header">
-            <div class="header-avatar">🎓</div>
+            <div class="header-logo">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" rx="12" fill="url(#logoGrad)"/>
+                    <path d="M14 36V14L24 22L34 14V36H14Z" fill="white" fill-opacity="0.95"/>
+                    <path d="M18 28H30M18 32H26" stroke="url(#logoGrad)" stroke-width="2" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="48" y2="48">
+                            <stop stop-color="#7C3AED"/>
+                            <stop offset="1" stop-color="#A855F7"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
             <div class="header-info">
                 <h1>志愿填报助手</h1>
                 <span class="subtitle">基于张雪峰方法论 · AI智能分析</span>
             </div>
         </header>
 
-        <!-- 聊天消息区域 -->
         <div class="chat-messages" id="chatMessages">
-            <!-- 消息会动态插入这里 -->
         </div>
 
-        <!-- 快捷输入区域 -->
         <div class="quick-inputs" id="quickInputs">
-            <!-- 快捷按钮会动态生成 -->
         </div>
 
-        <!-- 输入区域 -->
         <div class="input-area">
-            <textarea 
-                id="userInput" 
-                placeholder="输入你的信息或问题..." 
-                rows="1"
-                autofocus
-            ></textarea>
-            <button id="sendBtn" onclick="sendMessage()">
-                <span>发送</span>
-            </button>
+            <div class="input-wrapper">
+                <textarea 
+                    id="userInput" 
+                    placeholder="输入你的信息或问题…" 
+                    rows="1"
+                    autofocus
+                ></textarea>
+                <button id="sendBtn" class="send-btn" onclick="sendMessage()">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.4 20.4L20.85 12.92C21.66 12.57 21.66 11.43 20.85 11.08L3.4 3.6C2.74 3.31 2.01 3.8 2.01 4.51L2 9.12C2 9.62 2.37 10.05 2.87 10.11L17 12L2.87 13.88C2.37 13.95 2 14.38 2 14.88L2.01 19.49C2.01 20.2 2.74 20.69 3.4 20.4Z" fill="white"/>
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
 
-    <!-- 加载提示 -->
     <div class="loading-overlay" id="loadingOverlay" style="display: none;">
         <div class="loading-content">
             <div class="typing-indicator">
                 <span></span><span></span><span></span>
             </div>
-            <p>正在分析中...</p>
+            <p>正在分析中…</p>
         </div>
     </div>
 
-    <script src="js/zhang-xuefeng-prompt.js"></script>
-    <script src="js/ai-engine.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/zhang-xuefeng-prompt.js?v=3"></script>
+    <script src="js/ai-engine.js?v=3"></script>
+    <script src="js/app.js?v=3"></script>
 </body>
 </html>
