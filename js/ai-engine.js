@@ -521,7 +521,23 @@ ${this.context.preferredMajors.length > 0 ? `- 专业偏好：${this.context.pre
         const analysis = this.generateAnalysis();
         this.context.analysisResult = analysis;
 
-        // ... rest of preference collection
+        return {
+            text: `太好了！基本信息我已经记住了：
+
+📊 **你的情况**：
+- 省份：${this.context.province}
+- 年份：${this.context.year}
+- 分数：${this.context.score}分
+- 位次：第${this.context.rank}名
+- 科目：${this.context.subjectType}
+
+---
+
+接下来我想了解一下你的想法，这样推荐会更精准：
+
+**1️⃣ 你有没有特别想去的城市？**（比如想留本省、想去一线城市、或者没要求）`,
+            quickReplies: ['想去一线城市', '留在本省', '没要求，听你的', '有特定城市']
+        };
     }
 
 
